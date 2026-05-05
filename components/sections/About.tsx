@@ -52,7 +52,7 @@ export default function About() {
             <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-gradient-to-br from-accent-cyan/30 to-accent-emerald/20 blur-2xl" />
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
-                src="/Sajjad Profile pic.jpeg"
+                src="/sajjad-profile-pic.jpeg"
                 alt={`${personalInfo.name}, ${personalInfo.title}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 28rem"

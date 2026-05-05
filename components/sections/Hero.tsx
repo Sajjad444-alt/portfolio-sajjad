@@ -206,7 +206,7 @@ export default function Hero() {
               >
                 <div className="relative w-72 sm:w-80 lg:w-[22rem] aspect-[4/5] rounded-2xl overflow-hidden bg-bg-soft">
                   <Image
-                    src="/Sajjad Profile pic.jpeg"
+                    src="/sajjad-profile-pic.jpeg"
                     alt={`${personalInfo.name} — ${personalInfo.title}`}
                     fill
                     priority
