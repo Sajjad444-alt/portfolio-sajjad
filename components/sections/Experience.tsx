@@ -77,16 +77,26 @@ export default function Experience() {
                       {exp.summary}
                     </p>
 
-                    <ul className="mt-4 space-y-2">
-                      {exp.highlights.map((h, idx) => (
-                        <li
-                          key={idx}
-                          className="flex gap-3 text-sm text-white/70"
-                        >
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent-cyan flex-shrink-0" />
-                          <span className="leading-relaxed">{h}</span>
-                        </li>
-                      ))}
+                    <ul className="mt-4 space-y-3">
+                      {exp.highlights.map((h, idx) => {
+                        // Highlight key technical terms
+                        let formattedText = h;
+                        const keywords = ["Oracle RAC", "DataGuard", "Maximo", "GoldenGate", "Zero-downtime", "Entra ID", "Intune", "knovelPACS", "HIPAA", "Cloudflare Tunnel", "Active Directory", "MySQL replication", "RMAN", "Always On"];
+                        keywords.forEach(kw => {
+                          const regex = new RegExp(`(${kw})`, "gi");
+                          formattedText = formattedText.replace(regex, '<span class="font-bold text-accent-cyan">$1</span>');
+                        });
+
+                        return (
+                          <li
+                            key={idx}
+                            className="flex gap-3 text-[15px] text-white/85"
+                          >
+                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-accent-cyan shadow-[0_0_8px_rgba(6,182,212,0.8)] flex-shrink-0" />
+                            <span className="leading-relaxed" dangerouslySetInnerHTML={{ __html: formattedText }} />
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>

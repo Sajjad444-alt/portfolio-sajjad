@@ -47,7 +47,7 @@ export default function WhatsAppButton() {
           className="fixed bottom-6 right-6 z-50"
         >
           {/* Pulse ring */}
-          <span className="absolute inset-0 rounded-full animate-ping bg-green-500/30" />
+          <span className="absolute inset-0 rounded-full animate-ping bg-accent-cyan/40" />
 
           <a
             href={WHATSAPP_URL}
@@ -56,7 +56,7 @@ export default function WhatsAppButton() {
             aria-label="Chat on WhatsApp"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="relative flex items-center gap-2 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-white rounded-full shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 transition-all duration-300"
+            className="relative flex items-center gap-2 bg-gradient-to-br from-accent-cyan/80 to-accent-blue/80 hover:from-accent-cyan hover:to-accent-blue text-white rounded-full shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)] backdrop-blur-md border border-white/20 transition-all duration-300"
             style={{
               padding: hovered ? "14px 22px" : "14px",
             }}

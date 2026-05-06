@@ -293,14 +293,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-white/40">
-        <span className="text-[10px] font-mono uppercase tracking-[0.3em]">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-3 text-accent-cyan/80">
+        <span className="text-[11px] font-bold font-mono uppercase tracking-[0.35em]">
           Scroll
         </span>
         <motion.div
-          className="w-px h-10 bg-gradient-to-b from-accent-cyan to-transparent"
-          animate={{ scaleY: [0, 1, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-1 h-14 rounded-full bg-gradient-to-b from-accent-cyan via-accent-cyan/80 to-transparent shadow-[0_0_10px_rgba(6,182,212,0.8)]"
+          animate={{ scaleY: [0, 1, 0], opacity: [0, 1, 0], y: [0, 10, 20] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
     </section>
